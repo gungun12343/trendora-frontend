@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="80" viewBox="0 0 300 80">
+  <style>
+    text {
+      font-family: "Segoe UI", Arial, sans-serif;
+      font-weight: bold;
+      fill: #4A148C; /* deep purple for luxury feel */
+    }
+    .emoji {
+      font-size: 48px;
+    }
+    .brand {
+      font-size: 32px;
+    }
+  </style>
+  
+  <!-- Shopping Bag Emoji -->
+  <text x="20" y="55" class="emoji">🛍️</text>
+  
+  <!-- Brand Name -->
+  <text x="80" y="55" class="brand">Trendora</text>
+</svg>
