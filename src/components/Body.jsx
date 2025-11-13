@@ -9,7 +9,6 @@ import { Cart } from "./Cart";
 import { Checkout } from "./Checkout";
 import { Orders } from "./Orders";
 import { BuyNow } from "./BuyNow";
-import { Header2 } from "./Header2";
 import { AboutUs }  from "./AboutUs";
 import { ContactUs } from "./ContactUs";
 import { AIChatAssistant } from "./AIChatAssistant";

@@ -87,6 +87,7 @@ export const Header = () => {
                 <Link to={"/about"} className={`md:text-[18px] text-[14px] hover:text-violet-950 font-semibold text-gray-500 ${selected ? "text-violet-950" : ""}`}>About</Link>
                 <Link to={"/contact"} className={`md:text-[18px] text-[14px] hover:text-violet-950 font-semibold text-gray-500 ${selected ? "text-violet-950" : ""}`}>Contact</Link>
                 <Link to={"/order"} className={`md:text-[18px] text-[14px] hover:text-violet-950 font-semibold text-gray-500 ${selected ? "text-violet-950" : ""}`}>Orders</Link>
+                <Link to={"/chat"} className={`md:text-[18px] text-[14px] hover:text-violet-950 font-semibold text-gray-500 ${selected ? "text-violet-950" : ""}`}>Shopping Assistant</Link>
             </div>
         </div>
 
