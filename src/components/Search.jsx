@@ -12,7 +12,7 @@ export const Search = () => {
 
     useEffect(() => {
         if(search) {
-            axios.get(`http://localhost:8080/products/${search}`).then((res) => {
+            axios.get(`https://trendora-backend-1-we1g.onrender.com/products/${search}`).then((res) => {
                 setProducts(res.data);
                 if(res.data.length === 0 && !toast.isActive("no-match")) {
                     toast.error("No matches found", {

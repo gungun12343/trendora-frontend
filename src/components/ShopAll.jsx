@@ -29,7 +29,7 @@ export const ShopAll = () => {
     const category = searchParams.get("category") || "All Products";
 
     useEffect(() => {
-        axios.get("http://localhost:8080/products", {withCredentials: true}).then((res) => {
+        axios.get("https://trendora-backend-1-we1g.onrender.com/products", {withCredentials: true}).then((res) => {
             let allProducts = res.data;
 
             if(section !== "All" && category !== "All Products") {

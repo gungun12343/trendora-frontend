@@ -241,8 +241,8 @@ export const Checkout = () => {
         };
 
         if(Object.keys(validationErrors).length == 0) {
-          axios.post("http://localhost:8080/cart", {items}, {withCredentials: true}).then((res) => 
-            axios.post("http://localhost:8080/checkout", {ShippingAddress}, {withCredentials: true}).then((res) => {
+          axios.post("https://trendora-backend-1-we1g.onrender.com/cart", {items}, {withCredentials: true}).then((res) => 
+            axios.post("https://trendora-backend-1-we1g.onrender.com/checkout", {ShippingAddress}, {withCredentials: true}).then((res) => {
               dispatch(clearCart());
               if(res.status == 201) {
                 toast.success("Order placed successfully", {

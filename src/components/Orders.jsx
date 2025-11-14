@@ -9,7 +9,7 @@ export const Orders = () => {
 
     useEffect(() => {
         if(loggedIn) {
-            axios.get("http://localhost:8080/orders", {withCredentials: true}).then((res) => {
+            axios.get("https://trendora-backend-1-we1g.onrender.com/orders", {withCredentials: true}).then((res) => {
                 //console.log(res.data);
                 setOrders(res.data);
             })

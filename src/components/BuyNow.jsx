@@ -239,7 +239,7 @@ export const BuyNow = () => {
         };
 
         if(Object.keys(validationErrors).length == 0) {
-            axios.post("http://localhost:8080/buynow", {ShippingAddress: ShippingAddress, prod: prod}, {withCredentials: true}).then((res) => {
+            axios.post("https://trendora-backend-1-we1g.onrender.com/buynow", {ShippingAddress: ShippingAddress, prod: prod}, {withCredentials: true}).then((res) => {
                 if(res.status == 201) {
                   toast.success("Order placed successfully", {
                     position: "top-right",

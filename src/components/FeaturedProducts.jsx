@@ -6,7 +6,7 @@ export const FeaturedProduct = () => {
     const [products, setProducts] = useState(null);
 
     useEffect(() => {
-        axios.get("http://localhost:8080/products", {withCredentials: true}).then((res) => {
+        axios.get("https://trendora-backend-1-we1g.onrender.com/products", {withCredentials: true}).then((res) => {
             const data = res.data.filter((prod) => prod.featured === true);
             setProducts(data);
         })

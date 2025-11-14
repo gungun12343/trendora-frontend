@@ -53,7 +53,7 @@ export const Login = () => {
     }
 
     const handleCart = async () => {
-        const res = await axios.get("http://localhost:8080/cart", {withCredentials: true});
+        const res = await axios.get("https://trendora-backend-1-we1g.onrender.com/cart", {withCredentials: true});
         // console.log(res.data);
         const dbCart = res.data.items || [];
 
@@ -71,7 +71,7 @@ export const Login = () => {
         })
         // console.log(merged);
 
-        await axios.post("http://localhost:8080/cart", {items: merged}, {withCredentials: true});
+        await axios.post("https://trendora-backend-1-we1g.onrender.com/cart", {items: merged}, {withCredentials: true});
         dispatch(setCart({items: merged, isLoggedIn: true}));
     }
 
@@ -83,7 +83,7 @@ export const Login = () => {
 
         if(Object.keys(validationErrors).length === 0) {
             if(!isLogin) {
-                axios.post("http://localhost:8080/signup", formData, {withCredentials: true}).then((res) => {
+                axios.post("https://trendora-backend-1-we1g.onrender.com/signup", formData, {withCredentials: true}).then((res) => {
                     dispatch(setAuth(res.data));
                     handleCart();
                     //navigate("/")
@@ -91,7 +91,7 @@ export const Login = () => {
                 })
                 .catch((err) => dispatch(setAuth({loggedIn: false, user: null})))
             } else {
-                axios.post("http://localhost:8080/login", {
+                axios.post("https://trendora-backend-1-we1g.onrender.com/login", {
                     username: formData.username,
                     password: formData.password
                 }, {withCredentials: true}).then((res) => {

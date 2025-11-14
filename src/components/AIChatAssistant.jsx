@@ -47,7 +47,7 @@ useEffect(() => {
     setProducts([]);
 
     try {
-      const response = await fetch("http://localhost:8080/ai-assistant", {
+      const response = await fetch("https://trendora-backend-1-we1g.onrender.com/ai-assistant", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: input }),

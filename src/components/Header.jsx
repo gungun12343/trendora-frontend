@@ -19,7 +19,7 @@ export const Header = () => {
     const totalItems = items.reduce((sum, item) => sum + item.quantity, 0);
 
   const fetchCart =  () => {
-    axios.get("http://localhost:8080/cart", {withCredentials: true}).then((res) => {
+    axios.get("https://trendora-backend-1-we1g.onrender.com/cart", {withCredentials: true}).then((res) => {
       const dbCart = res.data.items || [];
       dispatch(setCart({items: dbCart, isLoggedIn: true}));
     }).catch((err) => console.log(err));
@@ -36,8 +36,8 @@ export const Header = () => {
     }, [])
 
     const handleLogout = () => {
-        axios.post("http://localhost:8080/cart", {items}, {withCredentials: true}).then((res) => {
-            axios.get("http://localhost:8080/logout", {withCredentials: true}).then((res) => {
+        axios.post("https://trendora-backend-1-we1g.onrender.com/cart", {items}, {withCredentials: true}).then((res) => {
+            axios.get("https://trendora-backend-1-we1g.onrender.com/logout", {withCredentials: true}).then((res) => {
                 dispatch(logout());
                 dispatch(clearCart());
                 navigate("/");
