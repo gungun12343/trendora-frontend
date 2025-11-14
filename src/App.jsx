@@ -14,7 +14,7 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    axios.get("http://localhost:8080/auth/status", {withCredentials: true}).then((res) => dispatch(setAuth(res.data)))
+    axios.get("https://trendora-backend-1-we1g.onrender.com/auth/status", {withCredentials: true}).then((res) => dispatch(setAuth(res.data)))
     .catch((err) => dispatch(setAuth({loggedIn: false, user: null})))
   })
   
