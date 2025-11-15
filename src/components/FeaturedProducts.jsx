@@ -1,18 +1,21 @@
 import axios from "axios";
 import { useEffect, useState } from "react"
+import { useSelector } from "react-redux";
 import {Link} from "react-router-dom"
 
 export const FeaturedProduct = () => {
-    const [products, setProducts] = useState(null);
+    //const [products, setProducts] = useState(null);
+    const products = useSelector((state) => state.featured);
+    //console.log(products);
 
-    useEffect(() => {
-        axios.get("https://trendora-backend-1-we1g.onrender.com/products", {withCredentials: true}).then((res) => {
-            const data = res.data.filter((prod) => prod.featured === true);
-            setProducts(data);
-        })
-    }, [])
+    // useEffect(() => {
+    //     axios.get("https://trendora-backend-1-we1g.onrender.com/products", {withCredentials: true}).then((res) => {
+    //         const data = res.data.filter((prod) => prod.featured === true);
+    //         setProducts(data);
+    //     })
+    // }, [])
 
-    if(products === null) return;
+    if(products === null) return <p>loading...</p>;
 
     return (
         <div>
