@@ -22,7 +22,7 @@ function App() {
   useEffect(() => {
     axios.get("https://trendora-backend-1-we1g.onrender.com/products", {withCredentials: true}).then((res) => {
             const data = res.data.filter((prod) => prod.featured === true);
-          setFeatured(data);
+          dispatch(setFeatured(data));
     })
   }, [])
   
