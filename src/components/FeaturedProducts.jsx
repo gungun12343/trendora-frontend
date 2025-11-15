@@ -15,7 +15,7 @@ export const FeaturedProduct = () => {
     //     })
     // }, [])
 
-    if(products === null) return <p>loading...</p>;
+    if(!products || products.length === 0) return <p>loading...</p>;
 
     return (
         <div>
